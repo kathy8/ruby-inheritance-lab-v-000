@@ -1,5 +1,8 @@
-class Student
+class User
+  attr_accessor :first_name, :last_name
+end
 
+class Student < user
 attr_accessor :knowledge
 
 def initialize
@@ -12,7 +15,9 @@ end
 
 def knowledge
   @knowledge
-
+end
 end
 
-end 
+student = Student.new
+student.learn("Javascript Embe Elixir knowledge")
+puts student.knowledge
